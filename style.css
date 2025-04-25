@@ -1,0 +1,258 @@
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #3a3a3a;
+  color: #fff;
+  padding: 1rem 0;
+}
+header h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1600x600?text=Historical+Image') no-repeat center center/cover;
+  min-height: 70vh;             
+  position: relative;
+  display: flex;
+  flex-direction: column;        
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;                
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 58, 58, 0.5);
+}
+.hero-content {
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  background-color: #d4af37;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;     
+  margin-top: 1.5rem;        
+}
+
+/* Map Section */
+.map-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+#map {
+  height: 400px;
+  width: 90%;
+  max-width: 800px;
+  margin: 1rem auto;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background-color: #3a3a3a;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Society Cards (used in societies.html) */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.card {
+  background-color: #fff;
+  width: 300px;
+  margin: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1rem;
+}
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+.card-content p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.card-content a {
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* Comparative Table Styles */
+.table-container {
+  padding: 2rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+table, th, td {
+  border: 1px solid #ddd;
+}
+th, td {
+  padding: 0.8rem;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
+
+/* Timeline Styles */
+.timeline {
+  padding: 2rem;
+}
+.timeline ul {
+  list-style: none;
+  position: relative;
+  padding: 0;
+}
+.timeline ul:before {
+  content: '';
+  background: #d4af37;
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  width: 4px;
+  height: 100%;
+  z-index: 1;
+}
+.timeline li {
+  margin-bottom: 2rem;
+  padding-left: 60px;
+  position: relative;
+}
+.timeline li::before {
+  content: '';
+  background: #fff;
+  border: 3px solid #d4af37;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+}
+.timeline li h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+.timeline li p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+/* Dashboard Map Styles */
+.dashboard-map {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+section.container p {
+  margin-bottom: 1rem;
+}
+section.container a.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-content h2 {
+    font-size: 1.8rem;  
+  }
+  .hero {
+    min-height: 80vh; 
+  }
+}
