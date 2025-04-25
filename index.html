@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Polygamous Societies in History and Today</title>
   <link rel="stylesheet" href="style.css">
- 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <style>
+    /* Constrain the video so the grey area around it isn’t too wide */
+    .video-wrapper {
+      max-width: 800px;
+      margin: 1.5rem auto;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,24 +20,41 @@
       <h1>Polygamous Societies in History and Today</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a class="current" href="index.html">Home</a></li>
           <li><a href="societies.html">Societies</a></li>
           <li><a href="comparative.html">Comparative Table</a></li>
           <li><a href="timeline.html">Timeline</a></li>
           <li><a href="insights.html">Insights</a></li>
-          <li><a href="dashboard.html">Modern Status</a></li>
+          <li><a href="connections.html">Connections</a></li>
+          <li><a href="citations.html">Citations</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
- 
   <section class="hero">
     <div class="hero-content">
       <h2>Understanding Polygamy: Cultures, Laws, and Traditions</h2>
       <p>Explore the historical and contemporary practices of polygamy from Africa to Asia.</p>
       <a href="societies.html" class="btn">Explore Societies</a>
     </div>
+  </section>
+
+  <section class="container">
+    <h2>Featured Documentary Segment</h2>
+    <div class="video-wrapper">
+      <iframe width="1198" height="558"
+        src="https://www.youtube.com/embed/gIP9ldkzCxU?start=0&end=15"
+        title="Polygamy in Africa documentary"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p style="text-align:center;font-size:.9rem">
+      Clip truncated to the first 15 seconds for focus. Full documentary available on YouTube.
+    </p>
   </section>
 
   <section class="map-section">
